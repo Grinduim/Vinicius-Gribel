@@ -1,0 +1,14 @@
+:root {
+  --el-color-primary: #519872;
+  --el-color-secondary: #3b5249;
+  --el-color-white: #f2f2f2;
+  --el-color-grey: #333333;
+  --el-color-black: #111111;
+}
+
+/* Apply default background color to body or app container */
+body {
+  /* background-color: var(--el-background-color); */
+  /* or using Tailwind: */
+
+}
