@@ -1,21 +1,27 @@
-// src/i18n/index.js
-import { createI18n } from 'vue-i18n'
+import { createI18n } from 'vue-i18n';
 
 export default createI18n({
-  legacy: false, // Use Composition API
+  legacy: true, // Enables the legacy API
   locale: 'en',
+  globalInjection: true, // Optional: For using $t globally
   messages: {
     en: {
       message: {
-        welcome: 'Welcome',
-        goodbye: 'Goodbye'
+        RiskChart: {
+          medium: 'Medium Risk',
+          high: 'High Risk',
+          low: 'Low Risk'
+        }
       }
     },
-    fr: {
+    pt: {
       message: {
-        welcome: 'Bienvenue',
-        goodbye: 'Au revoir'
+        RiskChart: {
+          medium: 'Risco Médio',
+          high: 'Risco Alto',
+          low: 'Risco Baixo'
+        }
       }
     }
   }
-})
+});
