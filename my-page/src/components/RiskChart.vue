@@ -1,10 +1,14 @@
 <template>
-  <div class="relative max-w-md mx-auto text-center">
+  <div class="relative max-w-md mx-auto text-center h-40">
     <apexchart type="donut" class="h-64" :options="chartOptions" :series="chartSeries" />
-    <p>aaa</p>
-    <div class="absolute inset-0 flex items-center justify-center text-lg font-bold text-gray-800">
-      {{ getRiskInfo(riskPercentage).label }}
+    <div class="absolute inset-0 flex flex-row items-center justify-center text-lg font-bold text-gray-800">
+      <div class="mt-32">
+        <div class="text-2xl">{{ getRiskInfo(riskPercentage).label }}</div>
+        <span class="text-xl">{{ riskPercentage }}</span>%
+      </div>
+    
     </div>
+
   </div>
 </template>
 
@@ -20,17 +24,17 @@ export default {
     riskPercentage: {
       type: Number,
       required: true
-    }
+    },
   },
   methods: {
     getRiskInfo(percentage) {
       if (percentage > RISK_LEVELS.HIGH.threshold) {
-        return { ...RISK_LEVELS.HIGH, label: this.$t('message.RiskChart.high') };
+        return { ...RISK_LEVELS.HIGH, label: this.$t('RiskChart.high') };
       }
       if (percentage > RISK_LEVELS.MEDIUM.threshold) {
-        return { ...RISK_LEVELS.MEDIUM, label: this.$t('message.RiskChart.medium') };
+        return { ...RISK_LEVELS.MEDIUM, label: this.$t('RiskChart.medium') };
       }
-      return { ...RISK_LEVELS.LOW, label: this.$t('message.RiskChart.low') };
+      return { ...RISK_LEVELS.LOW, label: this.$t('RiskChart.low') };
     }
   },
   computed: {

@@ -11,7 +11,10 @@ export default {
         secondary: "#3B5249",
         white: "#F2F2F2",
         grey: "#333333",
-        black: "#111111"
+        black: "#111111",
+        blue_agga: "#4445F8",
+        green_agga:"#28BD7D",
+        grey_agga:"#EFEFEF"
       },
       height: {
         'screen-small': '100svh',
