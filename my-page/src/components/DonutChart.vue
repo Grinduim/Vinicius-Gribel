@@ -46,10 +46,6 @@ export default {
       const validThreshold = this.thresholds.find((level) => this.percentage > level.threshold)
       const fallback = this.thresholds[this.thresholds.length - 1]
       const result = validThreshold || fallback
-      console.log(result)
-      console.log("aaaa")
-      console.log(this.percentage)
-      console.log(this.value)
       return result
     },
     chartSeries() {
